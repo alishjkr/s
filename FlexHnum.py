@@ -131,12 +131,12 @@ nissa = {
 tagadd = {
     "tagss": False,
     "tags": False,
-    "tag": "วิธีตั้งแทค \n- ตั้งแทค ข้อความที่ต้องการ",
-    "add": "ยินดีที่ได้รู้จักนะครับ 😃\nรับแอดละน้า. >_<",
+    "tag": "سلام جانم alish.pw",
+    "add": "thanks for add me . Alish.pw >_<",
     "wctext": "",
-    "lv": "บ๊ายบาย >< ขอให้เธอโชคดีงับ >_<",
-    "b": "บัญชีนี้ถูกป้องกันด้วย  ✯ᴮʸ✯нηυм вσт ℓιηє✯ ระบบได้บล็อคบัญชีคุณอัตโนมัติ >_<",
-    "m": "สวัสดีครับ ผมมุดลิ้งมานะครับ >_<",
+    "lv": "Bye Bye  >_<",
+    "b": " >_<",
+    "m": " >_<",
 }
 apalo = {
     "blacklist":{},
@@ -303,7 +303,7 @@ def ClonerV2(to):
         maxgie.updateProfilePicture(path2, 'vp')
     except Exception as error:
         print(error)
- #maxg = "ua26d317bf6c058a4c00aa93caee1ab0d"
+ #maxg = "ua053fcd4c52917706ae60c811e39d3ea"
 def sendMentionFooter(to, mid, firstmessage, lastmessage):
     try:
         arrData = ""
@@ -317,7 +317,7 @@ def sendMentionFooter(to, mid, firstmessage, lastmessage):
         text += mention + str(lastmessage)
         nama = "{}".format(maxgie.getContact(maxgieMID).displayName)
         img = "http://dl.profile.line-cdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus)
-        ticket = "https://line.me/ti/p/9P3vQS2cgd"
+        ticket = "https://line.me/ti/p/~alishjkr"
         maxgie.sendMessage(to, text, {'AGENT_LINK': ticket, 'AGENT_ICON': img, 'AGENT_NAME': nama, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         logError(error)
@@ -349,7 +349,7 @@ def mentions(to, text="", mids=[]):
         arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
         arr.append(arrData)
         textx += mention + str(text)
-    maxgie.sendMessage(to, textx, {'AGENT_NAME':'LINE OFFICIAL', 'AGENT_LINK': 'line://ti/p/~{}'.format(maxgie.getProfile().userid), 'AGENT_ICON': "http://dl.profile.line-cdn.net/" + maxgie.getContact("ua053fcd4c52917706ae60c811e39d3ea").picturePath, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    maxgie.sendMessage(to, textx, {'AGENT_NAME':'LINE OFFICIAL', 'AGENT_LINK': 'line://ti/p/~{}'.format(maxgie.getProfile().userid), 'AGENT_ICON': "http://dl.profile.line-cdn.net/" + maxgie.getContact("uf3a1125d058f41dd685da272487812c3").picturePath, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 def changeVideoAndPictureProfile(pict, vids):
     try:
         files = {'file': open(vids, 'rb')}
@@ -401,7 +401,7 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 def logError(text):
-    maxgie.log("[ ✯ᴮʸ✯нηυм вσт ℓιηє✯ แจ้งเตือน ] " + str(text))
+    maxgie.log("[ ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ ] " + str(text))
     time_ = datetime.now()
     with open("errorLog.txt","a") as error:
         error.write("\n[%s] %s" % (str(time), text))
@@ -555,7 +555,7 @@ def backupData():
 async def maxgieBot(op):
     try:
         if settings["restartPoint"] != None:
-            maxgie.sendMessage(settings["restartPoint"], 'ล็อคอินแล้วเรียบร้อย ><')
+            maxgie.sendMessage(settings["restartPoint"], ' ><')
             settings["restartPoint"] = None
         if op.type == 0:
             return
@@ -629,7 +629,7 @@ async def maxgieBot(op):
             s += "บายยน้า : {}".format(name)
             s += tagadd["wctext"]
             data = {
-"type":"flex","altText":" 🌸 มีคนสวยออกกลุ่ม 🌸 ","contents":{"styles":{"header":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"},"body":{"backgroundColor":"#000000","separator":True,"separatorColor":"#FFFFFF"},"footer":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"}},"type":"bubble","header":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"✯ᴮʸ✯нηυм вσт ℓιηє✯","uri":"line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}]},"hero":{"type":"image","url":"https://thumbs.gfycat.com/ColorlessPinkLangur-size_restricted.gif","size":"full","aspectRatio":"4:3","action":{"type":"uri","uri":"https://line.me/ti/p/9P3vQS2cgd"}},"body":{"type":"box","layout":"horizontal","spacing":"md","contents":[{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":0,"contents":[{"type":"separator","color":"#FFFFFF"},{"type":"image","url":"https://profile.line-scdn.net/" + str(pp),"size":"sm","gravity":"bottom"}]},{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":2,"contents":[{"type":"text","text":"BOTLINEBY:HNUM","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text": "{}".format(s),"color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text":"ออกสะแล้วบายยนะครับ😎","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"}]}]},"footer":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"⫷ ติดต่อผู้สร้าง ⫸","uri":"https://line.me/ti/p/9P3vQS2cgd"}},{"type":"spacer","size":"sm"}],"flex":0}}}
+"type":"flex","altText":" 🌸 มีคนสวยออกกลุ่ม 🌸 ","contents":{"styles":{"header":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"},"body":{"backgroundColor":"#000000","separator":True,"separatorColor":"#FFFFFF"},"footer":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"}},"type":"bubble","header":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","uri":"line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}]},"hero":{"type":"image","url":"https://thumbs.gfycat.com/ColorlessPinkLangur-size_restricted.gif","size":"full","aspectRatio":"4:3","action":{"type":"uri","uri":"https://line.me/ti/p/~alishjkr"}},"body":{"type":"box","layout":"horizontal","spacing":"md","contents":[{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":0,"contents":[{"type":"separator","color":"#FFFFFF"},{"type":"image","url":"https://profile.line-scdn.net/" + str(pp),"size":"sm","gravity":"bottom"}]},{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":2,"contents":[{"type":"text","text":"BOTLINEBY:HNUM","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text": "{}".format(s),"color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text":"ออกสะแล้วบายยนะครับ😎","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"}]}]},"footer":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"⫷ ติดต่อผู้สร้าง ⫸","uri":"https://line.me/ti/p/~alishjkr"}},{"type":"spacer","size":"sm"}],"flex":0}}}
             sendTemplate(op.param1, data)
         if op.type == 15:
           if settings["lv"] == True:
@@ -658,7 +658,7 @@ async def maxgieBot(op):
             s += "สวัสดีครับคุณ : {}".format(name)
             s += tagadd["wctext"]
             data = {
-"type":"flex","altText":" 🌸  มีคนเข้ากลุ่ม  🌸 ","contents":{"styles":{"header":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"},"body":{"backgroundColor":"#000000","separator":True,"separatorColor":"#FFFFFF"},"footer":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"}},"type":"bubble","header":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"⫷BOTLNEBY:HNUM","uri":"line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}]},"hero":{"type":"image","url":"https://media.giphy.com/media/MG1B6RPKn8OLC/giphy.gif","size":"full","aspectRatio":"4:3","action":{"type":"uri","uri":"https://line.me/ti/p/9P3vQS2cgd"}},"body":{"type":"box","layout":"horizontal","spacing":"md","contents":[{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":0,"contents":[{"type":"separator","color":"#FFFFFF"},{"type":"image","url":"https://profile.line-scdn.net/" + str(pp),"size":"sm","gravity":"bottom"}]},{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":2,"contents":[{"type":"text","text":"BOTLINEBY:HNUM","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text": "{}".format(s),"color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text":"ยินดีต้อนรับเข้ารวมกลุ่มนะครับ😎","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"}]}]},"footer":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"⫷ ติดต่อผู้สร้าง ⫸","uri":"https://line.me/ti/p/9P3vQS2cgd"}},{"type":"spacer","size":"sm"}],"flex":0}}}
+"type":"flex","altText":" 🌸  มีคนเข้ากลุ่ม  🌸 ","contents":{"styles":{"header":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"},"body":{"backgroundColor":"#000000","separator":True,"separatorColor":"#FFFFFF"},"footer":{"backgroundColor":"#990000","separator":True,"separatorColor":"#FFFFFF"}},"type":"bubble","header":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"⫷BOTLNEBY:HNUM","uri":"line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}]},"hero":{"type":"image","url":"https://media.giphy.com/media/MG1B6RPKn8OLC/giphy.gif","size":"full","aspectRatio":"4:3","action":{"type":"uri","uri":"https://line.me/ti/p/~alishjkr"}},"body":{"type":"box","layout":"horizontal","spacing":"md","contents":[{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":0,"contents":[{"type":"separator","color":"#FFFFFF"},{"type":"image","url":"https://profile.line-scdn.net/" + str(pp),"size":"sm","gravity":"bottom"}]},{"type":"separator","color":"#FFFFFF"},{"type":"box","layout":"vertical","flex":2,"contents":[{"type":"text","text":"BOTLINEBY:HNUM","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text": "{}".format(s),"color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"},{"type":"separator","color":"#FFFFFF"},{"type":"text","text":"ยินดีต้อนรับเข้ารวมกลุ่มนะครับ😎","color":"#FFCC00","size":"sm","weight":"bold","flex":3,"wrap":True,"gravity":"top"},{"type":"separator","color":"#FFFFFF"}]}]},"footer":{"type":"box","layout":"horizontal","contents":[{"type":"button","style":"secondary","color":"#FFFFFF","height":"sm","gravity":"center","flex":1,"action":{"type":"uri","label":"⫷ ติดต่อผู้สร้าง ⫸","uri":"https://line.me/ti/p/~alishjkr"}},{"type":"spacer","size":"sm"}],"flex":0}}}
             sendTemplate(op.param1, data)
         if op.type == 18:
           if settings["Wc"] == True:
@@ -872,29 +872,29 @@ async def maxgieBot(op):
                     sa="วิธีใช้ ประกาศกลุ่ม >\\<"
                     sa+="\n- ประกาศ ข้อความ/ไอดีไลน์"
                     sa+="\nตัวอย่าง >\\<"
-                    sa+="\n- ประกาศ มอนิ่ง/aboutme.."
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                    sa+="\n- ประกาศ มอนิ่ง/alishjkr"
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                     sendTemplate(to,data)
                 if text.lower() == "ตั้งapi":
                     sa = "วีธีใช้ api >\\<"
                     sa += "\n- ตั้งapi คีย์เวิร์ด;;ตอบกลับ"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- ตั้งapi เทส;;เทสทำไม"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                     sendTemplate(to,data)
                 if text.lower() == "stag":
                     sa = "วิธีใช้ stag >\\<"
                     sa += "\n- stag [เลขที่ต้องการ] @user"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- stag 1 @user"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                     sendTemplate(to,data)
                 if text.lower() == "สะกดกิต":
                     sa = "วิธีใช้ สะกดกิต >\\<"
                     sa += "\n- สะกดกิต [ข้อความ] @user"
                     sa += "\nตัวอย่าง >\\<"
                     sa += "\n- สะกดกิต รักแม็ก @user"
-                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                    data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                     sendTemplate(to,data)
                 if text.lower() == "เชคค่า" or text.lower() == "set":
                     sas = "☆ 𝗦𝗘𝗧𝗧𝗜𝗡𝗚 ☆"
@@ -929,7 +929,7 @@ async def maxgieBot(op):
                     if settings["Sticker"] == True: sa += "\n• เชคติ๊กใหญ่ ( เปิด )"
                     else:sa += "\n• เชคติ๊กใหญ่ ( ปิด )"
                     if sets["Sticker"] == False: sa += "\n• เชคโค๊ดสติ๊กเกอร์ ( เปิด )"
-                    else:sa += "\n• เชคโค๊ดสติ๊กเกอร์ ( ปิด )\n• ✯ᴮʸ✯нηυм вσт ℓιηє✯"
+                    else:sa += "\n• เชคโค๊ดสติ๊กเกอร์ ( ปิด )\n• ✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯"
                     
                     data = {
                         "type": "flex",
@@ -968,7 +968,7 @@ async def maxgieBot(op):
                     sendTemplate(to, data)
                 elif text.lower() == 'clearban' or text.lower() == "ล้างดำ":
                       apalo["Talkblacklist"] = []
-                      maxgie.sendMessage(to, "สำเร็จ >_<\n✯ᴮʸ✯нηυм вσт ℓιηє✯")
+                      maxgie.sendMessage(to, "สำเร็จ >_<\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯")
                 elif text.lower() == "cancelall" or text.lower() == "ยกเชิญ" and sender == maxgieMID:
                             if msg.toType == 2:
                                 group = maxgie.getGroup(to)
@@ -978,11 +978,11 @@ async def maxgieBot(op):
                                     invitee = [contact.mid for contact in group.invitee]
                                     for inv in invitee:
                                         maxgie.cancelGroupInvitation(to, [inv])
-                                    maxgie.sendMessage(to, "ยกเชิญจำนวน「 {} 」คน\n✯ᴮʸ✯нηυм вσт ℓιηє✯".format(str(len(invitee))))
+                                    maxgie.sendMessage(to, "ยกเชิญจำนวน「 {} 」คน\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯".format(str(len(invitee))))
                 elif text.lower() == "คทดำ":
                     if msg._from in maxgieMID:
                         if apalo["Talkblacklist"] == []:
-                            maxgie.sendMessage(to, "ไม่มีคท.คนติดดำ \n✯ᴮʸ✯нηυм вσт ℓιηє✯")
+                            maxgie.sendMessage(to, "ไม่มีคท.คนติดดำ \n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯")
                         else:
                             for bl in apalo["Talkblacklist"]:
                                 maxgie.sendMessage(to, text=None, contentMetadata={'mid': bl}, contentType=13)
@@ -1003,7 +1003,7 @@ async def maxgieBot(op):
                 elif msg.text.lower() == "รหัสสี":
                             c="https://i.pinimg.com/originals/d0/9c/8a/d09c8ad110eb44532825df454085a376.jpg"
                             p="https://i.pinimg.com/originals/7c/d3/aa/7cd3aa57150f8f6f18711ff22c9f6d4a.jpg"
-                            m="**ตัวอย่างที่1**\nคำสั่งเปลี่ยนสี me\nพิม'ตั้งสีme #FFFFFF'\n**ตัวอย่างที่2**\nคำสั่งเปลี่ยนสี tag\nพิม'ตั้งสีแทค #FFFFFF'\n✯ᴮʸ✯нηυм вσт ℓιηє✯"
+                            m="**ตัวอย่างที่1**\nคำสั่งเปลี่ยนสี me\nพิม'ตั้งสีme #FFFFFF'\n**ตัวอย่างที่2**\nคำสั่งเปลี่ยนสี tag\nพิม'ตั้งสีแทค #FFFFFF'\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯"
                             maxgie.sendImageWithURL(to,c)
                             maxgie.sendImageWithURL(to,p)
                             maxgie.sendMessage(to,m)
@@ -1011,14 +1011,14 @@ async def maxgieBot(op):
                             text_ = removeCmd("ตั้งบล็อค", text)
                             try:
                                 tagadd["b"] = text_
-                                maxgie.sendMessage(to,"「 ตั้งบล็อคอัตโนมัติ 」\nคือ : \n✯ᴮʸ✯нηυм вσт ℓιηє✯" + text_)
+                                maxgie.sendMessage(to,"「 ตั้งบล็อคอัตโนมัติ 」\nคือ : \n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯" + text_)
                             except:
                                 maxgie.sendMessage(to,"สำเเร็จแล้ว")
                 elif text.lower().startswith("ตั้งค้างเชิญ "):
                             text_ = removeCmd("ตั้งค้างเชิญ", text)
                             try:
                                 sets["autoCancel"]["members"] = text_
-                                maxgie.sendMessage(to,"「 ตั้งยกค้างเชิญ 」\nจำนวน : \n✯ᴮʸ✯нηυм вσт ℓιηє✯" + text_)
+                                maxgie.sendMessage(to,"「 ตั้งยกค้างเชิญ 」\nจำนวน : \n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯" + text_)
                             except:
                                 maxgie.sendMessage(to,"สำเเร็จแล้ว")
                 elif "Allban" in msg.text.lower():
@@ -1046,11 +1046,11 @@ async def maxgieBot(op):
                 if text.lower() == "ดำ":
                   if msg._from in admin:
                       apalo["Talkwblacklist"] = True
-                      maxgie.sendMessage(to,"ส่งคท.มา..\n✯ᴮʸ✯нηυм вσт ℓιηє✯")
+                      maxgie.sendMessage(to,"ส่งคท.มา..\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯")
                 if text.lower() == "ขาว":
                   if msg._from in admin:
                       apalo["Talkdblacklist"] = True
-                      maxgie.sendMessage(to,"ส่งคท.มา..\n✯ᴮʸ✯нηυм вσт ℓιηє✯")
+                      maxgie.sendMessage(to,"ส่งคท.มา..\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯")
                 elif text.lower().startswith("/exec\n") or "/exec" in msg.text:
                     try:
                         code = msg.text.replace("/exec\n", "")
@@ -1062,7 +1062,7 @@ async def maxgieBot(op):
                       try:
                           tagadd["tag"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                           sendTemplate(to,data)
                       except:
                           maxgie.sendMessage(to,"Done. >_<")
@@ -1071,7 +1071,7 @@ async def maxgieBot(op):
                       try:
                           settings["reply"] = text_
                           sa = "「 ตั้งคำแทค 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                           sendTemplate(to,data)
                       except:
                           maxgie.sendMessage(to,"Done. >_<")
@@ -1080,7 +1080,7 @@ async def maxgieBot(op):
                       try:
                           tagadd["wctext"] = text_
                           sa = "「 ตั้งต้อนรับ 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                           sendTemplate(to,data)
                       except:
                           maxgie.sendMessags(to,"Done. >_<")
@@ -1096,7 +1096,7 @@ async def maxgieBot(op):
                       try:
                           tagadd["add"] = text_
                           sa = "「 ตั้งแอด 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                           sendTemplate(to,data)
                       except:
                           maxgie.sendMessags(to,"Done. >_<")
@@ -1105,7 +1105,7 @@ async def maxgieBot(op):
                       try:
                           settings["commet"] = text_
                           sa = "「 ตั้งคอมเม้น 」\nคือ : " + text_
-                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                          data = {"type": "text","text": "{}".format(sa),"sentBy": {"label": "นายหนุ่ม Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                           sendTemplate(to,data)
                       except:
                           maxgie.sendMessags(to,"Done. >_<")
@@ -1230,7 +1230,7 @@ async def maxgieBot(op):
                                         "action": {
                                             "type":"uri",
                                             "label":"ผู้สร้าง",
-                                            "uri":"https://line.me/ti/p/9P3vQS2cgd"
+                                            "uri":"https://line.me/ti/p/~alishjkr"
                                         },
                                     },
                                 ]
@@ -1335,12 +1335,12 @@ async def maxgieBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": 'https://www.img.live/images/2019/11/21/2ac721.jpg',
+                                                "url": 'https://www.img.live/images/2019/12/09/IMG_20191209_015126_982.jpg',
                                                 "size": "full"
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "🇹🇭คำสั่งส่วนตัว🇹🇭",
+                                                "text": "Alishjoker",
                                                 "size": "xxl",
                                                 "weight": "bold",
                                                 "align": "center",
@@ -1368,8 +1368,8 @@ async def maxgieBot(op):
                                                  "color":"#990000",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"✯ᴮʸ✯нηυм вσт ℓιηє✯",
-                                                     "uri":"https://line.me/ti/p/9P3vQS2cgd"
+                                                     "label":"✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯",
+                                                     "uri":"https://line.me/ti/p/~alishjkr"
                                                  },
                                             },
                                         ]
@@ -1389,12 +1389,12 @@ async def maxgieBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": 'https://www.img.live/images/2019/11/22/AVAE2032.jpg',
+                                                "url": 'https://www.img.live/images/2019/12/09/IMG_20191209_015126_982.jpg',
                                                 "size": "full"
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "🇹🇭คำสั่งพิเศษ🇹🇭",
+                                                "text": "Alishjoker",
                                                 "size": "xxl",
                                                 "weight": "bold",
                                                 "align": "center",
@@ -1421,8 +1421,8 @@ async def maxgieBot(op):
                                                  "color":"#FF0000",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"✯ᴮʸ✯нηυм вσт ℓιηє✯",
-                                                     "uri":"https://line.me/ti/p/9P3vQS2cgd"
+                                                     "label":"✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯",
+                                                     "uri":"https://line.me/ti/p/~alishjkr"
                                                  },
                                             },
                                         ]
@@ -1442,12 +1442,12 @@ async def maxgieBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": 'https://www.img.live/images/2019/11/21/2ac721.jpg',
+                                                "url": 'https://www.img.live/images/2019/12/09/IMG_20191209_015126_982.jpg',
                                                 "size": "full"
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "🇹🇭คำสั่งเปิด/ปิด🇹🇭",
+                                                "text": "Alishjoker",
                                                 "size": "xxl",
                                                 "weight": "bold",
                                                 "align": "center",
@@ -1474,8 +1474,8 @@ async def maxgieBot(op):
                                                  "color":"#990000",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"✯ᴮʸ✯нηυм вσт ℓιηє✯",
-                                                     "uri":"https://line.me/ti/p/9P3vQS2cgd"
+                                                     "label":"✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯",
+                                                     "uri":"https://line.me/ti/p/~alishjkr"
                                                  },
                                             },
                                         ]
@@ -1495,12 +1495,12 @@ async def maxgieBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": 'https://www.img.live/images/2019/11/22/AVAE2032.jpg',
+                                                "url": 'https://www.img.live/images/2019/12/09/IMG_20191209_015134_614.jpg',
                                                 "size": "full"
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "🇹🇭คำสั่งตั้งค่า/ติดดำ🇹🇭",
+                                                "text": "ALISHJOKER",
                                                 "size": "xxl",
                                                 "weight": "bold",
                                                 "align": "center",
@@ -1550,8 +1550,8 @@ async def maxgieBot(op):
                                                  "color":"#FF0000",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"✯ᴮʸ✯нηυм вσт ℓιηє✯",
-                                                     "uri":"https://line.me/ti/p/9P3vQS2cgd"
+                                                     "label":"✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯",
+                                                     "uri":"https://line.me/ti/p/~alishjkr"
                                                  },
                                             },
                                         ]
@@ -1571,12 +1571,12 @@ async def maxgieBot(op):
                                         "contents": [
                                             {
                                                 "type": "image",
-                                                "url": 'https://www.img.live/images/2019/11/21/2ac721.jpg',
+                                                "url": 'https://www.img.live/images/2019/12/09/IMG_20191209_015125_198.jpg',
                                                 "size": "full"
                                             },
                                             {
                                                 "type": "text",
-                                                "text": "🇹🇭คำสั่งทั่วไป🇹🇭",
+                                                "text": "Ali Ahmadi",
                                                 "size": "xxl",
                                                 "weight": "bold",
                                                 "align": "center",
@@ -1603,8 +1603,8 @@ async def maxgieBot(op):
                                                  "color":"#990000",
                                                  "action":{
                                                      "type":"uri",
-                                                     "label":"✯ᴮʸ✯нηυм вσт ℓιηє✯",
-                                                     "uri":"https://line.me/ti/p/9P3vQS2cgd"
+                                                     "label":"Id ✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯",
+                                                     "uri":"https://line.me/ti/p/~alishjkr"
                                                  },
                                             },
                                         ]
@@ -1691,11 +1691,11 @@ async def maxgieBot(op):
                     status = maxgie.getProfile().statusMessage
                     s = temp["te"]
                     a = temp["t"]
-                    data={"type":"flex","altText":"{} sendFlex".format(name),"contents":{"type":"bubble",'styles': {"body":{"backgroundColor":a}},"hero":{"type":"image","url":cover,"size":"full","aspectRatio":"20:13","aspectMode":"cover"},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":" "},{"type":"image","url":profile,"size":"lg"},{"type":"text","text":" "},{"type":"text","text":name,"size":"xl","weight":"bold","color":s,"align":"center"},{"type":"text","text":" "},{"type":"text","text":status,"align":"center","size":"xs","color":s,"wrap":True},{"type":"text","text":" "},{"type":"button","style":"primary","color":"#669999","action":{"type":"uri","label":"ADD ME","uri":"line://app/1602687308-GXq4Vvk9?type=video&ocu=https://www.img.live/images/2019/11/21/2ac721.jpg"}}]}}}
+                    data={"type":"flex","altText":"{} sendFlex".format(name),"contents":{"type":"bubble",'styles': {"body":{"backgroundColor":a}},"hero":{"type":"image","url":cover,"size":"full","aspectRatio":"20:13","aspectMode":"cover"},"body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":" "},{"type":"image","url":profile,"size":"lg"},{"type":"text","text":" "},{"type":"text","text":name,"size":"xl","weight":"bold","color":s,"align":"center"},{"type":"text","text":" "},{"type":"text","text":status,"align":"center","size":"xs","color":s,"wrap":True},{"type":"text","text":" "},{"type":"button","style":"primary","color":"#669999","action":{"type":"uri","label":"ADD ME","uri":"line://app/1602687308-GXq4Vvk9?type=video&ocu=https://www.img.live/images/2019/12/09/IMG_20191209_015125_198.jpg"}}]}}}
                     sendTemplate(to, data)
                 if text.lower() == "me1":
                     contact = maxgie.getContact(sender)
-                    sendTemplate(to,{"type":"flex","altText": "FCK_VEZA","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#FF69B4","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://app/1636169025-yQ7bGMVA?type=profile"},"type":"text","text":"VH_LittleBot","align":"center","weight":"bold"},{"type":"separator","color":"#FF69B4"},{"color":"#FF69B4","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://ti/p/~aboutme.."},"type":"text","text":"Chat_Me","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#FFD2E6"},"body":{"backgroundColor":"#ffffff"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF69B4"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://i.ibb.co/ZXzddDh/Pics-Art-01-07-05-35-09.png"},{"type":"separator","color":"#FF69B4"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://i.ibb.co/GdwQtdS/Screenshot-2018-1215-233501.png"},{"type":"separator","color":"#FF69B4"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://media.giphy.com/media/qqWB4u3mrTlrG/giphy.gif"},{"type":"separator","color":"#FF69B4"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://i.pinimg.com/originals/a6/94/ec/a694ec9773292abec803f07befd73e74.gif"},{"type":"separator","color":"#FF69B4"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF69B4"},{"type":"box","contents":[{"type":"separator","color":"#FF69B4"},{"color":"#413877","size":"md","wrap":True,"type":"text","text":"MAXGIE BOTS","weight":"bold"},{"type":"separator","color":"#FF69B4"},{"color":"#413877","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF69B4"},{"color":"#FF69B4","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#422002"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})
+                    sendTemplate(to,{"type":"flex","altText": "FCK_VEZA","contents":{"type":"bubble","footer":{"type":"box","layout":"horizontal","contents":[{"color":"#FF69B4","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://app/1636169025-yQ7bGMVA?type=profile"},"type":"text","text":"VH_LittleBot","align":"center","weight":"bold"},{"type":"separator","color":"#FF69B4"},{"color":"#FF69B4","size":"xs","wrap":True,"action":{"type":"uri","uri":"line://ti/p/~alishjkr"},"type":"text","text":"Chat_Me","align":"center","weight":"bold"}]},"styles":{"footer":{"backgroundColor":"#FFD2E6"},"body":{"backgroundColor":"#ffffff"}},"body":{"type":"box","contents":[{"type":"box","contents":[{"type":"separator","color":"#FF69B4"},{"aspectMode":"cover","gravity":"bottom","aspectRatio":"1:1","size":"sm","type":"image","url":"https://i.ibb.co/ZXzddDh/Pics-Art-01-07-05-35-09.png"},{"type":"separator","color":"#FF69B4"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://i.ibb.co/GdwQtdS/Screenshot-2018-1215-233501.png"},{"type":"separator","color":"#FF69B4"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://media.giphy.com/media/qqWB4u3mrTlrG/giphy.gif"},{"type":"separator","color":"#FF69B4"},{"type":"image","aspectMode":"cover","aspectRatio":"1:1","size":"sm","url":"https://i.pinimg.com/originals/a6/94/ec/a694ec9773292abec803f07befd73e74.gif"},{"type":"separator","color":"#FF69B4"}],"layout":"vertical","spacing":"none","flex":1},{"type":"separator","color":"#FF69B4"},{"type":"box","contents":[{"type":"separator","color":"#FF69B4"},{"color":"#413877","size":"md","wrap":True,"type":"text","text":"MAXGIE BOTS","weight":"bold"},{"type":"separator","color":"#FF69B4"},{"color":"#413877","size":"md","wrap":True,"type":"text","text":"{}".format(contact.displayName),"weight":"bold"},{"type":"separator","color":"#FF69B4"},{"color":"#FF69B4","size":"xs","wrap":True,"type":"text","text":"Status Profile:","weight":"bold"},{"type":"text","text":"{}".format(contact.statusMessage),"size":"xxs","wrap":True,"color":"#422002"}],"layout":"vertical","flex":2}],"layout":"horizontal","spacing":"md"},"hero":{"aspectMode":"cover","margin":"xxl","aspectRatio":"1:1","size":"full","type":"image","url":"https://obs.line-scdn.net/{}".format(contact.pictureStatus)}}})
                 elif text.lower() == "/me":
                             s = temp["te"]
                             a = temp["t"]
@@ -1763,7 +1763,7 @@ async def maxgieBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                                                            "uri": "https://line.me/ti/p/~alishjkr"
                                                         }
                                                     },
                                                     {
@@ -1835,7 +1835,7 @@ async def maxgieBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                                                            "uri": "https://line.me/ti/p/~alishjkr"
                                                         }
                                                     },
                                                     {
@@ -1921,7 +1921,7 @@ async def maxgieBot(op):
                                                         "size": "md",
                                                         "action": {
                                                             "type": "uri",
-                                                            "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                                                            "uri": "https://line.me/ti/p/~alishjkr"
                                                         }
                                                     },
                                                     {
@@ -1955,7 +1955,7 @@ async def maxgieBot(op):
                         "sentBy": {
                              "label": "{}".format(maxgie.getContact(maxgieMID).displayName),
                              "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                             "linkUrl": "line://nv/profilePopup/mid=https://line.me/ti/p/9P3vQS2cgd"
+                             "linkUrl": "line://nv/profilePopup/mid=https://line.me/ti/p/~alishjkr"
                         }
                     }
                     sendTemplate(to, data)
@@ -2005,7 +2005,7 @@ async def maxgieBot(op):
                                      "size": "full",
                                      "action": {
                                          "type": "uri",
-                                          "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                                          "uri": "https://line.me/ti/p/~alishjkr"
                                      }
                                 }
                             ]
@@ -2020,26 +2020,26 @@ async def maxgieBot(op):
                         "sentBy": {
                              "label": "รีบอทสำเร็จ...",
                              "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                             "linkUrl": "line://nv/profilePopup/mid=https://line.me/ti/p/9P3vQS2cgd"
+                             "linkUrl": "line://nv/profilePopup/mid=https://line.me/ti/p/~alishjkr"
                         }
                     }
                     sendTemplate(to, data)
                     restartBot()
                 if text.lower() == "/speed" or text.lower() == "/sp" or text.lower() == "/สปีด":
                     start = time.time()
-                    maxgie.sendMessage("https://line.me/ti/p/9P3vQS2cgd","speed...")
+                    maxgie.sendMessage("https://line.me/ti/p/~alishjkr","speed...")
                     elapsed_time = time.time() - start
                     took = time.time() - start
-                    a = "ความเร็ว :\n- เชิร์ฟเวอร์ : %.3f วินาที" % (took)
-                    data = {"type": "text","text": "{}".format(a),"sentBy": {"label": "%.10f" % (elapsed_time), "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                    a = " : %.3f " % (took)
+                    data = {"type": "text","text": "{}".format(a),"sentBy": {"label": "%.10f" % (elapsed_time), "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                     #
                     sendTemplate(to,data)
                 if text.lower() == "sp" or text.lower() == "speed":
                     start = time.time()
-                    maxgie.sendMessage("ua26d317bf6c058a4c00aa93caee1ab0d","test speed...")
+                    maxgie.sendMessage("uf3a1125d058f41dd685da272487812c3","test speed...")
                     elapsed_time = time.time() - start
                     took = time.time() - start
-                    a = "ความเร็ว : %.3f วินาที" % (took)
+                    a = " : %.3f s" % (took)
                     data = {
                         "type": "flex",
                         "altText": "BotSpeed",
@@ -2047,7 +2047,7 @@ async def maxgieBot(op):
                             "type": "bubble",
                             "hero": {
                                 "type":"image",
-                                "url":"https://www.img.live/images/2019/11/21/2ac721.jpg",
+                                "url":"https://www.img.live/images/2019/12/09/IMG_20191209_015125_198.jpg",
                                 "size": "full",
                                 "aspectRatio": "1:1",
                                 "aspectMode": "fit"
@@ -2073,7 +2073,7 @@ async def maxgieBot(op):
                 elif text.lower() == 'ข้อมูล' or text.lower() == "about":
                     try:
                         arr = []
-                        owner = "ua26d317bf6c058a4c00aa93caee1ab0d"
+                        owner = "uf3a1125d058f41dd685da272487812c3"
                         creator = maxgie.getContact(owner)
                         contact = maxgie.getContact(maxgieMID)
                         grouplist = maxgie.getGroupIdsJoined()
@@ -2101,7 +2101,7 @@ async def maxgieBot(op):
                             "sentBy": {
                                  "label": "{}".format(maxgie.getContact(maxgieMID).displayName),
                                  "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),
-                                 "linkUrl": "https://line.me/ti/p/9P3vQS2cgd"
+                                 "linkUrl": "https://line.me/ti/p/~alishjkr"
                             }
                         }
                         sendTemplate(to, data)
@@ -2109,7 +2109,7 @@ async def maxgieBot(op):
                     except Exception as e:
                         maxgie.sendMessage(msg.to, str(e))
                 elif text.lower() == "หลุดมือ":
-                            gifnya = ['https://www.img.live/images/2019/11/21/2ac721.jpg']
+                            gifnya = ['https://www.img.live/images/2019/12/09/IMG_20191209_015125_198.jpg']
                             data = {
                                 "type": "template",
                                 "altText": "Image carouserl",
@@ -2121,7 +2121,7 @@ async def maxgieBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                                                "uri": "https://line.me/ti/p/~alishjkr"
                                             }
                                         }
                                     ]
@@ -2129,7 +2129,7 @@ async def maxgieBot(op):
                             }
                             sendTemplate(to, data)
                 elif text.lower() == "ยิงๆ" or text.lower() == "ยิง":
-                            gifnya = ['https://www.img.live/images/2019/11/21/2ac721.jpg']
+                            gifnya = ['https://www.img.live/images/2019/12/09/IMG_20191209_015125_198.jpg']
                             data = {
                                 "type": "template",
                                 "altText": "Image carouserl",
@@ -2141,7 +2141,7 @@ async def maxgieBot(op):
                                             "size": "full",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                                                "uri": "https://line.me/ti/p/~alishjkr"
                                             }
                                         }
                                     ]
@@ -2250,15 +2250,15 @@ async def maxgieBot(op):
                     tagadd["tagss"] = False
                     maxgie.sendMessage(to, "ปิดแล้ว >_<")
                 if text.lower() == "เปิดคอมเม้น":
-                    settings["com"] = True
+                    settings["com"] = False
                     maxgie.sendMessage(to,"เปิดแล้ว >_<")
                 if text.lower() == "ปิดคอมเม้น":
                     settings["com"] = False
                     maxgie.sendMessage(to, "ปิดแล้ว >_<")
-                if text.lower() == "เปิดต้อนรับ":
+                if text.lower() == "Welcome on":
                     settings["Welcome"] = True
                     maxgie.sendMessage(to, "เปิดแล้ว >_<")
-                if text.lower() == "ปิดต้อนรับ":
+                if text.lower() == "Welcome off":
                     settings["Welcome"] = False
                     maxgie.sendMessage(to,"ปิดแล้ว >_<")
                 if text.lower() == "เปิดต้อนรับ2":
@@ -2273,18 +2273,18 @@ async def maxgieBot(op):
                 if text.lower() == "ปิดคนออก":
                     settings["Leave"] = False
                     maxgie.sendMessage(to,"ปิดแล้ว >_<")
-                if text.lower() == "เปิดยกเลิก":
+                if text.lower() == "unsendMessage on":
                     settings["unsendMessage"] = True
-                    maxgie.sendMessage(to, "เปิดแล้ว >_<")
-                if text.lower() == "ปิดยกเลิก":
+                    maxgie.sendMessage(to, "روشن شد >_<")
+                if text.lower() == "unsendMessage off":
                     settings["unsendMessage"] = False
-                    maxgie.sendMessage(to,"ปิดแล้ว >_<")
-                if text.lower() == "เปิดติ๊กใหญ่":
+                    maxgie.sendMessage(to,"خاموش شد >_<")
+                if text.lower() == "sticker on":
                     settings["Sticker"] = True
-                    maxgie.sendMessage(to,"เปิดแล้ว >_<")
-                if text.lower() == "ปิดติ๊กใหญ่":
+                    maxgie.sendMessage(to,"روشن شد >_<")
+                if text.lower() == "sticker off":
                     settings["Sticker"] = False
-                    maxgie.sendMessage(to,"ปิดแล้ว >_<")
+                    maxgie.sendMessage(to,"خاموش شد >_<")
                 if text.lower() == "เปิดโค๊ดติ๊ก":
                     sets["Sticker"] = True
                     maxgie.sendMessage(to,"เปิดแล้ว >_<")
@@ -2324,7 +2324,7 @@ async def maxgieBot(op):
 #---------------------------------ลูกเล่น--------------------------------------------------------------------------------------#                                   
 #---------------------------------ลูกเล่น--------------------------------------------------------------------------------------#                            
                 elif text.lower() == "เทสบอท":
-                    nn2(to,"「✯ᴮʸ✯нηυм вσт ℓιηє✯」")
+                    nn2(to,"「✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯」")
                     time.sleep(1)
                     nn3(to, "█▒... 10.0%")
                     time.sleep(1)
@@ -2336,72 +2336,72 @@ async def maxgieBot(op):
                     time.sleep(1)
                     nn3(to, "███████████..100.0%")
                     time.sleep(1)
-                    nn4(to,"「👉บอทยังทำงานจ้าา👈」\n✯ᴮʸ✯нηυм вσт ℓιηє✯")               
+                    nn4(to,"「\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯")               
          
                 elif msg.text in ["เทส2","เทส"]:
                     Chivaree1={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "กำลังโหลด:▒...0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree2={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "█▒... 10.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree3={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "██▒... 20.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree4={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "███▒... 30.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}  
                        
                     Chivaree5={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "████▒... 40.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree6={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "█████▒... 50.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree7={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "█████▒... 60.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree8={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "██████▒... 70.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree9={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "████████▒... 80.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree10={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "█████████▒... 90.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree11={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "███████████..100.0%","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
   
                     Chivaree12={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "บอทยังทำงานคับท่าน😁","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree13={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
-                       "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "••✯ᴮʸ✯нηυм вσт ℓιηє✯","color": "#00FF00","align": "center","size": "xs"}]},
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
+                       "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "••✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","color": "#00FF00","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#000000"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
 
                     sendTemplate(to, Chivaree1)
@@ -2432,63 +2432,63 @@ async def maxgieBot(op):
 #-----------------------------------------------------------------------------------------------------------------------------------------#                   
                 elif msg.text in ["ด่า","ด่ามาน"]:
                     Chivaree1={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "กำลังด่า [รอสักครู่]..","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree2={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "ไอ้เย็บแม่!! เดะกุตบหัวหลุด","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree3={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "ก็มาดิไอ่เวร เหมือนเก่งอะ","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree4={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "มัดมือป่าว มีดคนละเล่มจะได้จบๆ","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}  
                        
                     Chivaree5={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "เหมือนหล่ออะไอ้เวร","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree6={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "ระวังตัวใว้ มึงเข้าไปเดี๋ยวเจอเลย","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree7={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "มองครวยไรละไอสัส","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree8={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "ไม่เคยเห็นบอทด่าเหรอ","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree9={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "ก็ม่ได้เสียวาไรอยู่แล้ว","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree10={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "เหมือนหล่ออะคับ","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
                        
                     Chivaree11={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
                        "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "จอบอ จบ.....","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}  
                     
                     Chivaree12={
-                       "type": "flex","altText": "✯ᴮʸ✯нηυм вσт ℓιηє✯","contents": { "type": "bubble",     
-                       "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "••✯ᴮʸ✯нηυм вσт ℓιηє✯••","color": "#ffffff","align": "center","size": "xs"}]},
+                       "type": "flex","altText": "✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯","contents": { "type": "bubble",     
+                       "body": {"type": "box","layout": "vertical",   "contents": [{"type": "text","text": "••✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯••","color": "#ffffff","align": "center","size": "xs"}]},
                        "styles": {"body": {"backgroundColor": "#0033FF"},"footer": {"backgroundColor": "#ffffff","separator": True,"separatorColor": "#000000"}}}}
 
                     sendTemplate(to, Chivaree1)
@@ -2523,10 +2523,10 @@ async def maxgieBot(op):
                             for group in groups:
                               #  maxgie.generateReplyMessage(msg.id)
                               #  maxgie.sendReplyImage(msg.id, group, path)
-                                maxgie.sendMessage(group, "「 ประกาศ 」\n\n{}\n✯ᴮʸ✯нηυм вσт ℓιηє✯".format(str(text_)))
+                                maxgie.sendMessage(group, "「 ประกาศ 」\n\n{}\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯".format(str(text_)))
                                # maxgie.generateReplyMessage(msg.id)
                                 maxgie.sendImage(group, str(path))
-                            maxgie.sendMessage(to, "ส่งคำประกาศเสร็จแล้ว จำนวน {} กลุ่ม\n✯ᴮʸ✯нηυм вσт ℓιηє✯".format(str(len(groups))))
+                            maxgie.sendMessage(to, "ส่งคำประกาศเสร็จแล้ว จำนวน {} กลุ่ม\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯".format(str(len(groups))))
                 elif msg.text.lower().startswith("ประกาศ "):
                             delcmd = msg.text.split(" ")
                             get = msg.text.replace(delcmd[0]+" ","").split("/")
@@ -2572,7 +2572,7 @@ async def maxgieBot(op):
                                 }
                                 sendTemplate(group, data)
                                 time.sleep(1)
-                            maxgie.sendMessage(to, "ส่งคำประกาศจำนวน {} กลุ่ม\n✯ᴮʸ✯нηυм вσт ℓιηє✯".format(str(len(groups))))
+                            maxgie.sendMessage(to, "ส่งคำประกาศจำนวน {} กลุ่ม\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯".format(str(len(groups))))
 #==============================================================================#
                 elif text.lower() == "แทค":
                         group = maxgie.getGroup(to);nama = [contact.mid for contact in group.members];nama.remove(maxgie.getProfile().mid)
@@ -2809,7 +2809,7 @@ async def maxgieBot(op):
                                             "aspectMode": "cover",
                                             "action": {
                                                 "type": "uri",
-                                                "uri": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"
+                                                "uri": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"
                                             }
                                         },
                                         "body": {
@@ -3116,11 +3116,11 @@ async def maxgieBot(op):
                     if spl[0] == "":
                         spl[1] = spl[1].strip()
                         ag = maxgie.getGroupIdsInvited()
-                        txt = "กำลังยกเลิกค้างเชิญจำนวน "+str(len(ag))+" กลุ่ม\n✯ᴮʸ✯нηυм вσт ℓιηє✯"
+                        txt = "กำลังยกเลิกค้างเชิญจำนวน "+str(len(ag))+" กลุ่ม\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯"
                         if spl[1] != "":
                             txt = txt + " ด้วยข้อความ \""+spl[1]+"\""
                         txt = txt + "\nกรุณารอสักครู่.."
-                        data = {"type": "text","text": "{}".format(str(txt)),"sentBy": {"label": "{}".format(maxgie.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                        data = {"type": "text","text": "{}".format(str(txt)),"sentBy": {"label": "{}".format(maxgie.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                         sendTemplate(to, data)
                         procLock = len(ag)
                         for gr in ag:
@@ -3131,13 +3131,13 @@ async def maxgieBot(op):
                                 maxgie.leaveGroup(gr)
                             except:
                                 pass
-                        sis = "สำเร็จแล้ว (｀・ω・´)\n✯ᴮʸ✯нηυм вσт ℓιηє✯"
-                        data = {"type": "text","text": "{}".format(str(sis)),"sentBy": {"label": "{}".format(maxgie.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua26d317bf6c058a4c00aa93caee1ab0d"}}
+                        sis = "สำเร็จแล้ว (｀・ω・´)\n✯ʙʏ ᴀʟɪ ᴀʜᴍᴀᴅɪ✯"
+                        data = {"type": "text","text": "{}".format(str(sis)),"sentBy": {"label": "{}".format(maxgie.getContact(maxgieMID).displayName),"iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=ua053fcd4c52917706ae60c811e39d3ea"}}
                         sendTemplate(to, data)
                         
                 elif text.lower() == 'คนสร้างกลุ่ม' or text.lower() == "แอด":
                     group = maxgie.getGroup(to)
-                  #  maxg = "ua26d317bf6c058a4c00aa93caee1ab0d"
+                  #  maxg = "ua053fcd4c52917706ae60c811e39d3ea"
                   #  contact = maxgie.getContact(maxg)
                     GS = group.creator
                   #  n = contact.displayName
@@ -3206,7 +3206,7 @@ async def maxgieBot(op):
                 #                "size":"sm",
                 #                "action": {
                 #                    "type": "uri",
-                #                    "uri": "https://line.me/ti/p/9P3vQS2cgd"
+                #                    "uri": "https://line.me/ti/p/~alishjkr"
                 #                }
                 #            },
                 #        }
@@ -3467,7 +3467,7 @@ async def maxgieBot(op):
                 if text is None:
                     return
                 if text.lower() == ".........................":
-                    maxgie.sendMessage(to,"[ STEVE Botline ]\nadmin :\nhttps://line.me/ti/p/9P3vQS2cgd")
+                    maxgie.sendMessage(to,"[ STEVE Botline ]\nadmin :\nhttps://line.me/ti/p/~alishjkr")
 #========================================================================
             elif msg.contentType == 7: # Content type is sticker
                 if settings['Sticker']:
@@ -3710,7 +3710,7 @@ async def maxgieBot(op):
                     for i in mc["wr"]:
                         lisk+="\nคีย์เวิร์ด: "+str(i)+"\nตอบโต้: "+str(mc["wr"][i])+"\n"
                     lisk+="\nวิธีล้างapi >\\<\nล้างapi ตามด้วยคำที่จะล้าง"
-                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "STEVE Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=https://line.me/ti/p/9P3vQS2cgd"}}
+                    data = {"type": "text","text": "{}".format(lisk),"sentBy": {"label": "STEVE Botline", "iconUrl": "https://obs.line-scdn.net/{}".format(maxgie.getContact(maxgieMID).pictureStatus),"linkUrl": "line://nv/profilePopup/mid=https://line.me/ti/p/~alishjkr"}}
                     sendTemplate(to,data)
 #==============================================================================#
 #==============================================================================#
